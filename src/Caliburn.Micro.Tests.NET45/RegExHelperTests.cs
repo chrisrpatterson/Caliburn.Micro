@@ -12,7 +12,7 @@ namespace Caliburn.Micro.WPF.Tests {
 
             var result = RegExHelper.GetCaptureGroup(groupName, regex);
 
-            Assert.Equal("(?<group>.*)", result);
+            Assert.Equal("(?<group>.*) ", result);
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace Caliburn.Micro.WPF.Tests {
 
             var result = RegExHelper.NamespaceToRegEx(ns);
 
-            Assert.Equal(@"Caliburn\.Micro\.WPF\.Tests", result);
+            Assert.Equal(@"Caliburn\.Micro\.WPF\.Test", result);
         }
 
         [Fact]
@@ -57,7 +57,7 @@ namespace Caliburn.Micro.WPF.Tests {
 
             var expression = String.Concat("^", RegExHelper.NameRegEx, "$"); // Make sure we're doing a whole string match
 
-            Assert.True(Regex.IsMatch("identifier1", expression));
+            Assert.True(Regex.IsMatch("identifier13", expression));
             Assert.True(Regex.IsMatch("_identifier2", expression));
             Assert.True(Regex.IsMatch("Expression_ConditionⅩExpression〡Expression〡ExpressionⅩViewModel", expression));
 
