@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 namespace Caliburn.Micro.WPF.Tests {
     using Xunit;
 
+//
     public class RegExHelperTests {
         [Fact]
         public void GetCaptureGroupReturnesGroupNameAndRegex() {
