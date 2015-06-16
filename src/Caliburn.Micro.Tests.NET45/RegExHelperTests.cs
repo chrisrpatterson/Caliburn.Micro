@@ -22,7 +22,7 @@ namespace Caliburn.Micro.WPF.Tests {
 
             var result = RegExHelper.NamespaceToRegEx(ns);
 
-            Assert.Equal(@"Caliburn\.Micro\.WPF\.Test", result);
+            Assert.Equal(@"Caliburn\.Micro\.WPF\.Tests", result);
         }
 
         [Fact]
